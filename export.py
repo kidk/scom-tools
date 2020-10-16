@@ -32,6 +32,6 @@ for datasource in datasources:
         print("Exporting content: %s" % (filename))
         print()
         content = file.getElementsByTagName("Contents")[0].childNodes[0].data
-        f = open(os.path.join(output, filename), "a")
+        f = open(os.path.join(output, filename), "w")
         f.write(content)
         f.close()
