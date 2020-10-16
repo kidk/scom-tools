@@ -29,6 +29,8 @@ for datasource in datasources:
     files = datasource.getElementsByTagName("File")
     for idx, file in enumerate(files):
         filename = file.getElementsByTagName("Name")[0].childNodes[0].data
+        print("Exporting content: %s" % (filename))
+        print()
         content = file.getElementsByTagName("Contents")[0].childNodes[0].data
         f = open(os.path.join(output, filename), "a")
         f.write(content)
