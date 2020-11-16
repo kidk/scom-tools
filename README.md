@@ -14,6 +14,16 @@ Within this repository you can find a directory called [management packs](https:
 
 ### 2) Unseal SCOM Management pack
 
+From the list of exported management packs (`scom-management-packs.csv`) select the `Name` of the one you want to unpact. If you're unsure what the exact name is, use the following command to get a full list.
+
+`Get-SCOMManagementPack | Select Name | sort Name`
+
+Export the management pack to view its contents:
+
+`Get-SCOMManagementPack | Where {$_.Name -eq "<MP Name>"} | Export-SCOMManagementPack –path "."`
+
+You should find a file with same name as your management pack in the current directory.
+
 ### 3) Find script behind metrics
 
 ### 4) Check if New Relic supports metric out of the box
