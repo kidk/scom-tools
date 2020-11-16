@@ -1,10 +1,21 @@
-# SCOM Management pack tools
+# New Relic SCOM Management Pack migration guide
 
-# export.py
+## Guide
 
-Run with `python3 export.py [path to file]`
-After the script exits succesfully you will find the Management packs scripts in the `export` directory.
+### 1) Unseal SCOM Management pack
 
-## Example
+### 2) Find script behind metrics
 
-`python3 export.py examples/Microsoft.Windows.Server.AD.2016.Monitoring.xml`
+### 3) Check if New Relic supports metric out of the box
+
+### 4) If not, recreate functionality using Flex.
+
+#### 4a) VBScript
+
+#### 4b) Powershell
+
+#### 4c) ...
+
+### 5) Share your knowledge by creating a pull request
+
+
