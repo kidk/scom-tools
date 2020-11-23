@@ -16,6 +16,9 @@ collection = DOMTree.documentElement
 datasources = collection.getElementsByTagName("DataSourceModuleType")
 
 print("Creating output directory")
+if not os.path.exists('export'):
+    os.makedirs('export')
+
 output = os.path.join(os.getcwd(), "export/%s" % (os.path.basename(filename)))
 try:
     os.mkdir(output)
