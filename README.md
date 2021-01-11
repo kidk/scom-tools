@@ -22,9 +22,11 @@ Export the management pack to view its contents:
 
 `Get-SCOMManagementPack | Where {$_.Name -eq "<MP Name>"} | Export-SCOMManagementPack –path "."`
 
-You should find a file with same name as your management pack in the current directory.
+You should find a XML file with same name as your management pack in the current directory.
 
 ### 3) Find script behind metrics
+
+Now that you've unsealed the management pack you want to replace, move the XML file to your local machine and follow the instructions in the [export script folder](./export-script) to unpack the file. You should end up with a clear understanding where the management pack is getting it's information and how.
 
 ### 4) Check if New Relic supports metric out of the box
 
